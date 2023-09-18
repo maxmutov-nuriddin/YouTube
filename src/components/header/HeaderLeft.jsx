@@ -8,7 +8,7 @@ const HeaderLeft = () => {
       <ul className="headerLeft__menu d-flex flex-column gap-1">
         <li className="headerLeft__menu-item py-2 px-3">
           <Link className='headerLeft__link' to="/">
-            <img className="headerLeft__icon me-4" src="../../public/home-icon.svg" alt="icon" />
+            <img className="headerLeft__icon me-4" src="../public/home-icon.svg" alt="icon" />
             Home
           </Link>
         </li>
