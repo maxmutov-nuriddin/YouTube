@@ -1,0 +1,106 @@
+.ne__page-title,
+.one__page-status,
+.one__page-duration {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  word-wrap: break-word;
+  height: 35px;
+}
+
+.one__page-thumbnail {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.one__page-iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.one__page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left__page-title,
+.one__page-link,
+.one__page-text {
+  font-size: 15px;
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.one__page-text {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.one__page-subscribe-button,
+.one__page-share-button,
+.one__page-download-button,
+.btn-link {
+  padding: 7px 10px;
+  border-radius: 20px;
+  background: var(--light-search, rgba(0, 0, 0, 0.07)) !important;
+}
+
+@media only screen and (max-width: 1236px) {
+  .one__page {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .one__page-box {
+    flex-direction: column;
+    gap: 20px !important;
+  }
+
+  .one__page-iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+  .one__page-iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 150px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+  }
+}
