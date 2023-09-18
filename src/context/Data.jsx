@@ -16,7 +16,7 @@ export const DataProvider = ({ children }) => {
       gl: 'US'
     },
     headers: {
-      'X-RapidAPI-Key': 'a5846e8f80msheb39e293bfad4a0p1e7294jsn6528494f1ca8',
+      'X-RapidAPI-Key': '0366b4b8e8msh7d6aca41ea8e581p16b943jsn7b9ef0948d4d',
       'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
   };
