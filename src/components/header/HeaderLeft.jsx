@@ -14,19 +14,19 @@ const HeaderLeft = () => {
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
           <Link className='headerLeft__link' to="/">
-            <img className="headerLeft__icon me-4" src="../../../public/svg/location-icon.svg" alt="icon" />
+            <img className="headerLeft__icon me-4" src="../svg/location-icon.svg" alt="icon" />
             Explore
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
           <Link className='headerLeft__link' to="/">
-            <img className="headerLeft__icon me-4" src="../../../public/svg/shorts-icon.svg" alt="icon" />
+            <img className="headerLeft__icon me-4" src="../svg/shorts-icon.svg" alt="icon" />
             Shorts
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
           <Link className='headerLeft__link' to="/">
-            <img className="headerLeft__icon me-4" src="../../../public/svg/subcribtions-icon.svg" alt="icon" />
+            <img className="headerLeft__icon me-4" src="../svg/subcribtions-icon.svg" alt="icon" />
             Subscriptions
           </Link>
         </li>
@@ -35,31 +35,31 @@ const HeaderLeft = () => {
       <ul className="headerLeft__menu d-flex flex-column gap-1">
         <li className="headerLeft__menu-item py-2 px-3">
           <Link className='headerLeft__link' to="/">
-            <img className="headerLeft__icon me-4" src="../../../public/svg/library-icon.svg" alt="icon" />
+            <img className="headerLeft__icon me-4" src="../svg/library-icon.svg" alt="icon" />
             Library
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
           <Link className='headerLeft__link' to="/">
-            <img className="headerLeft__icon me-4" src="../../../public/svg/history-icon.svg" alt="icon" />
+            <img className="headerLeft__icon me-4" src="../svg/history-icon.svg" alt="icon" />
             History
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
           <Link className='headerLeft__link' to="/">
-            <img className="headerLeft__icon me-4" src="../../../public/svg/your-video-icon.svg" alt="icon" />
+            <img className="headerLeft__icon me-4" src="../svg/your-video-icon.svg" alt="icon" />
             Your videos
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
           <Link className='headerLeft__link' to="/">
-            <img className="headerLeft__icon me-4" src="../../../public/svg/watch-later-icon.svg" alt="icon" />
+            <img className="headerLeft__icon me-4" src="../svg/watch-later-icon.svg" alt="icon" />
             Watch later
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
           <Link className='headerLeft__link' to="/">
-            <img className="headerLeft__icon me-4" src="../../../public/svg/pop-icon.svg" alt="icon" />
+            <img className="headerLeft__icon me-4" src="../svg/pop-icon.svg" alt="icon" />
             Pop
           </Link>
         </li>

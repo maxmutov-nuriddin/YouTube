@@ -87,7 +87,7 @@ const Header = () => {
           </li>
           <li className="header__menu-item">
             <Link className="header__link" to="/">
-              <img src="../../../public/png/girl-face.png" alt="your img" />
+              <img src="../png/girl-face.png" alt="your img" />
             </Link>
           </li>
         </ul>
