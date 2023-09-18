@@ -7,6 +7,7 @@ import Layout from './layout';
 
 
 import './App.css'
+import PageNotFound from './pages/PageNotFound';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<AllPageVideo />} />
           <Route path="/video/:id" element={<VideoPage />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </>
