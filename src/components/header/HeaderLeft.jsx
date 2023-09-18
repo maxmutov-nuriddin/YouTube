@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HeaderLeft = () => {
 
   return (
-    <div className="headerLeft d-flex flex-column ps-2 gap-2">
+    <div className="headerLeft d-flex flex-column ps-2 gap-2 h-100">
       <ul className="headerLeft__menu d-flex flex-column gap-1">
         <li className="headerLeft__menu-item py-2 px-3">
           <Link className='headerLeft__link' to="/">
