@@ -7,12 +7,15 @@ import { BrowserRouter } from 'react-router-dom';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css'
+import { SearchContext } from './context/Search.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <AppContextProvider>
     <DataProvider>
+      <SearchContext>
         <BrowserRouter>
           <App />
         </BrowserRouter>
+      </SearchContext>
     </DataProvider>
   </AppContextProvider>
 )

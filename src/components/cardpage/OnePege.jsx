@@ -1,13 +1,27 @@
 /* eslint-disable react/prop-types */
 import { FetchContext } from '../../context/Data';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AiOutlineDislike } from 'react-icons/ai';
 import { AiOutlineLike } from 'react-icons/ai';
 import LeftPageCard from './LeftPageCard';
 import '../cardpage/onePage.css';
+import { SearchContexts } from '../../context/Search';
 
 const OnePage = ({ fetch, id }) => {
-  const { data } = useContext(FetchContext);
+  const { data } = useContext(FetchContext)
+  const { searchContext } = useContext(SearchContexts)
+  const [searchResults, setSearchResults] = useState([]);
+
+  useEffect(() => {
+    const results = data.filter((item) => {
+      if (searchContext === true) {
+        return item;
+      } else if (typeof searchContext === 'string' && item.video.title.toLowerCase().includes(searchContext.toLowerCase())) {
+        return item;
+      }
+    });
+    setSearchResults(results);
+  }, [data, searchContext]);
 
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
@@ -116,7 +130,7 @@ const OnePage = ({ fetch, id }) => {
         </div>
       </div>
       <div className="col-xl-4 col-12 d-flex flex-column box__card">
-        {data.map((fetch, index) => (
+        {searchResults.map((fetch, index) => (
           <LeftPageCard fetch={fetch} key={index} />
         ))}
       </div>

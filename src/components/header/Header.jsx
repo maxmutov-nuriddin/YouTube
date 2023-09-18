@@ -5,12 +5,15 @@ import { useContext } from 'react';
 import { AppContext } from '../../context/Context';
 
 import './Header.css';
+import { SearchContexts } from '../../context/Search';
 
 const Header = () => {
   const { values, setValues } = useContext(AppContext);
+  const { setSearchContext } = useContext(SearchContexts)
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
   const [searchValue, setSearchValue] = useState('');
+
 
   const recognition = new window.webkitSpeechRecognition();
   recognition.continuous = true;
@@ -60,9 +63,10 @@ const Header = () => {
       recognition.start();
     }
   };
-  
+
 
   const handleInputChange = (event) => {
+    setSearchContext(searchValue)
     setSearchValue(event.target.value);
   };
 
