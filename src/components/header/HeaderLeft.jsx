@@ -19,13 +19,13 @@ const HeaderLeft = () => {
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
-          <Link className='headerLeft__link' to="/">
+          <Link className='headerLeft__link' to="https://www.youtube.com/results?search_query=trending">
             <img className="headerLeft__icon me-4" src="../svg/shorts-icon.svg" alt="icon" />
             Shorts
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
-          <Link className='headerLeft__link' to="/">
+          <Link className='headerLeft__link' to="https://www.youtube.com/feed/subscriptions">
             <img className="headerLeft__icon me-4" src="../svg/subcribtions-icon.svg" alt="icon" />
             Subscriptions
           </Link>
@@ -34,31 +34,31 @@ const HeaderLeft = () => {
       <hr className="headerLeft__separator" />
       <ul className="headerLeft__menu d-flex flex-column gap-1">
         <li className="headerLeft__menu-item py-2 px-3">
-          <Link className='headerLeft__link' to="/">
+          <Link className='headerLeft__link' to="https://www.youtube.com/feed/library">
             <img className="headerLeft__icon me-4" src="../svg/library-icon.svg" alt="icon" />
             Library
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
-          <Link className='headerLeft__link' to="/">
+          <Link className='headerLeft__link' to="https://www.youtube.com/feed/history">
             <img className="headerLeft__icon me-4" src="../svg/history-icon.svg" alt="icon" />
             History
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
-          <Link className='headerLeft__link' to="/">
+          <Link className='headerLeft__link' to="https://studio.youtube.com/channel/UCw-3fm5P93zeGGTwtWzbOlg">
             <img className="headerLeft__icon me-4" src="../svg/your-video-icon.svg" alt="icon" />
             Your videos
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
-          <Link className='headerLeft__link' to="/">
+          <Link className='headerLeft__link' to="https://www.youtube.com/playlist?list=WL">
             <img className="headerLeft__icon me-4" src="../svg/watch-later-icon.svg" alt="icon" />
             Watch later
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
-          <Link className='headerLeft__link' to="/">
+          <Link className='headerLeft__link' to="https://www.youtube.com/playlist?list=LL">
             <img className="headerLeft__icon me-4" src="../svg/pop-icon.svg" alt="icon" />
             Pop
           </Link>
@@ -73,19 +73,19 @@ const HeaderLeft = () => {
       <p className="headerLeft__titles ps-3">SUBSCRIPTIONS</p>
       <ul className="headerLeft__menu d-flex flex-column gap-1">
         <li className="headerLeft__menu-item py-2 px-3">
-          <Link className='headerLeft__link' to="/">
+          <Link className='headerLeft__link' to="https://www.youtube.com/@FCBarcelona">
             <img className="headerLeft__icon me-4" src="../png/fc.png" alt="icon" />
             FC Barcelona
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
-          <Link className='headerLeft__link' to="/">
+          <Link className='headerLeft__link' to="https://www.youtube.com/@TED">
             <img className="headerLeft__icon me-4" src="../png/ted.svg" alt="icon" />
             TED
           </Link>
         </li>
         <li className="headerLeft__menu-item py-2 px-3">
-          <Link className='headerLeft__link' to="/">
+          <Link className='headerLeft__link' to="https://www.youtube.com/@fifa">
             <img className="headerLeft__icon me-4" src="../png/fifa.svg" alt="icon" />
             FIFA
           </Link>
