@@ -56,6 +56,23 @@ const Header = () => {
     }
   };
 
+  useEffect(() => {
+    const actives = () => {
+      if (window.innerWidth < 913) {
+        setValues(false);
+      } else {
+      setValues(true);
+      }
+    }
+
+    actives();
+    window.addEventListener("scroll", actives);
+
+  }, [window.innerWidth]);
+
+
+  console.log(window.innerWidth);
+
   const handleVoiceButtonClick = () => {
     if (isListening) {
       recognition.abort();
