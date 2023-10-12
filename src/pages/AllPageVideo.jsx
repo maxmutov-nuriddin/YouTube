@@ -1,6 +1,9 @@
 
 import Card from "../components/card/Card";
 
+
+console.log(window);
+
 const AllPageVideo = () => {
   return (
     <>
