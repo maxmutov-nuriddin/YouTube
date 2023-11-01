@@ -10,8 +10,6 @@ const VideoPage = () => {
 
   const filteredData = data.filter((item) => item.video.videoId === id);
 
-  console.log(filteredData);
-
   return (
     <section>
       {filteredData.map((fetch, index) => (

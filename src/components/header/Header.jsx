@@ -71,8 +71,6 @@ const Header = () => {
   }, [window.innerWidth]);
 
 
-  console.log(window.innerWidth);
-
   const handleVoiceButtonClick = () => {
     if (isListening) {
       recognition.abort();
