@@ -2,6 +2,9 @@
 import { Link } from "react-router-dom";
 
 const CardPage = ({ fetch }) => {
+
+
+
   return (
     <div className="cards__item">
       <Link to={`/video/${fetch.video.videoId}`}>
@@ -13,8 +16,8 @@ const CardPage = ({ fetch }) => {
           <div className="ms-3">
             <h5 className="cards__title">{fetch.video.title}</h5>
             <div className="d-flex justify-content-between">
-              <p className="cards__title" >{fetch.video.isLiveNow ? 'Live' : 'Not Live'}</p>
-              <p className="cards__title" >{fetch.video.lengthSeconds} second</p>
+              <p className="cards__title">{fetch.video.isLiveNow ? 'Live' : 'Not Live'}</p>
+              <p className="cards__title">{fetch.video.lengthSeconds} second</p>
             </div>
           </div>
         </div>
@@ -23,4 +26,4 @@ const CardPage = ({ fetch }) => {
   )
 }
 
-export default CardPage
+export default CardPage;

@@ -32,7 +32,7 @@ const Card = () => {
 
 
   if (loading) {
-    return <div><span className="loader"></span></div>;
+    return <div className='load'><span className="loader"></span></div>;
   }
 
   return (

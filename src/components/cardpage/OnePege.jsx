@@ -8,11 +8,13 @@ import '../cardpage/onePage.css';
 import { SearchContexts } from '../../context/Search';
 
 const OnePage = ({ fetch, id }) => {
+  const [loading, setLoading] = useState(true);
   const { data } = useContext(FetchContext)
   const { searchContext } = useContext(SearchContexts)
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
+    setLoading(true)
     const results = data.filter((item) => {
       if (searchContext === true) {
         return item;
@@ -20,8 +22,12 @@ const OnePage = ({ fetch, id }) => {
         return item;
       }
     });
-    setSearchResults(results);
+    setTimeout(() => {
+      setSearchResults(results);
+      setLoading(false);
+    }, 1000);
   }, [data, searchContext]);
+
 
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
@@ -76,6 +82,10 @@ const OnePage = ({ fetch, id }) => {
     navigator.clipboard.writeText(window.location.href);
     alert('Ссылка скопирована в буфер обмена!');
   };
+
+  if (loading) {
+    return <div className='load'><span className="loader"></span></div>;
+  }
 
   return (
     <section className="one__page mt-5">
