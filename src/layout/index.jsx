@@ -11,7 +11,7 @@ const Layout = () => {
   const { values } = useContext(AppContext);
 
   return (
-    <Fragment>
+    <Fragment>  
       <Header />
       <div className={`AllPageVideo__sidebar ${values ? '' : 'close'}`}>
         <HeaderLeft />
