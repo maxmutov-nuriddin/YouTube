@@ -1,11 +1,15 @@
 /* eslint-disable react/prop-types */
-import { FetchContext } from '../../context/Data';
 import { useContext, useEffect, useState } from 'react';
-import { AiOutlineDislike } from 'react-icons/ai';
-import { AiOutlineLike } from 'react-icons/ai';
-import LeftPageCard from './LeftPageCard';
-import '../cardpage/onePage.css';
+
+import { FetchContext } from '../../context/Data';
 import { SearchContexts } from '../../context/Search';
+
+import LeftPageCard from './LeftPageCard';
+
+import { AiOutlineDislike, AiOutlineLike } from 'react-icons/ai';
+
+import '../cardpage/onePage.css';
+
 
 const OnePage = ({ fetch, id }) => {
   const [loading, setLoading] = useState(true);

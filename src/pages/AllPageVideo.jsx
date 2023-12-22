@@ -1,4 +1,3 @@
-
 import Card from "../components/card/Card";
 
 const AllPageVideo = () => {

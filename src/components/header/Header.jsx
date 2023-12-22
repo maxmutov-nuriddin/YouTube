@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+
 import { AppContext } from '../../context/Context';
+import { SearchContexts } from '../../context/Search';
 
 import './Header.css';
-import { SearchContexts } from '../../context/Search';
+
 
 const Header = () => {
   const { values, setValues } = useContext(AppContext);

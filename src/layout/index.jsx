@@ -1,17 +1,16 @@
 import { Fragment, useContext } from "react";
 import { Outlet } from "react-router-dom";
 
-
 import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
-import { AppContext } from "../context/Context";
 import HeaderLeft from "../components/header/HeaderLeft";
+
+import { AppContext } from "../context/Context";
 
 const Layout = () => {
   const { values } = useContext(AppContext);
 
   return (
-    <Fragment>  
+    <Fragment>
       <Header />
       <div className={`AllPageVideo__sidebar ${values ? '' : 'close'}`}>
         <HeaderLeft />
@@ -21,7 +20,6 @@ const Layout = () => {
           <Outlet />
         </main>
       </div>
-      <Footer />
     </Fragment>
   );
 };

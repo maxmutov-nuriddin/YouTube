@@ -6,9 +6,9 @@ import VideoPage from './pages/VideoPage';
 import Layout from './layout';
 
 
-import './App.css'
 import PageNotFound from './pages/PageNotFound';
 
+import './App.css'
 
 function App() {
 

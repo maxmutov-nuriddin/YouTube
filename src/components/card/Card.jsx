@@ -1,7 +1,10 @@
 import { useContext, useEffect, useState } from "react";
+
 import { FetchContext } from "../../context/Data";
 import { SearchContexts } from "../../context/Search";
+
 import CardPage from "../cardpage/CardPage";
+
 import './Card.css';
 
 const Card = () => {
@@ -26,7 +29,7 @@ const Card = () => {
 
     setTimeout(() => {
       setSearchResults(results);
-      setLoading(false); 
+      setLoading(false);
     }, 1000);
   }, [data, searchContext]);
 

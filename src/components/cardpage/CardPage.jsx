@@ -2,9 +2,6 @@
 import { Link } from "react-router-dom";
 
 const CardPage = ({ fetch }) => {
-
-
-
   return (
     <div className="cards__item">
       <Link to={`/video/${fetch.video.videoId}`}>
