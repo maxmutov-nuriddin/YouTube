@@ -43,6 +43,12 @@
   display: none;
 }
 
+.close.hidden {
+  opacity: 0;
+  height: 0;
+}
+
+
 .none {
   left: 0;
 }
