@@ -16,10 +16,11 @@ export const DataProvider = ({ children }) => {
       gl: 'US'
     },
     headers: {
-      'X-RapidAPI-Key': 'ca3db54de2msh2932c26b50a80bap188689jsn224469bf1f7d',
+      'X-RapidAPI-Key': 'f2a515dbf4msh6503d7ffd909b39p18ecc5jsnc24ab6142965',
       'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
   };
+  
   useEffect(() => {
     axios.request(options).then(function (response) {
       setData(response.data.contents);

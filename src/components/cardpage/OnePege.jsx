@@ -38,7 +38,7 @@ const OnePage = ({ fetch, id, commetns }) => {
         published_time: "Just Now",
         like_count: 0,
         dislike_count: 0,
-        thumbnails: [{ url: "../../../public/png/ted.svg" }],
+        thumbnails: [{ url: "./png/ted.svg" }],
       };
   
       const updatedComments = [...commetns.comments, newCommentObj];
@@ -177,7 +177,7 @@ const OnePage = ({ fetch, id, commetns }) => {
             </div>
             <div className='d-flex align-items-center mt-5 gap-3'>
               <div>
-                <img src="../../../public/png/ted.svg" alt="icon" className='commetn__img' />
+                <img src="./png/ted.svg" alt="icon" className='commetn__img' />
               </div>
               <div>
                 <input
