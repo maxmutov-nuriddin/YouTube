@@ -67,6 +67,15 @@
   background: var(--light-search, rgba(0, 0, 0, 0.07)) !important;
 }
 
+.comment__inp {
+  width: 100vh;
+  padding:10px
+}
+
+.commetn__img{
+  width: 8vh;
+}
+
 @media only screen and (max-width: 1236px) {
   .one__page {
     flex-direction: column;

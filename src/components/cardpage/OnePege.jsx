@@ -11,11 +11,46 @@ import { AiOutlineDislike, AiOutlineLike } from 'react-icons/ai';
 import '../cardpage/onePage.css';
 
 
-const OnePage = ({ fetch, id }) => {
+const OnePage = ({ fetch, id, commetns }) => {
+  ''
   const [loading, setLoading] = useState(true);
   const { data } = useContext(FetchContext)
   const { searchContext } = useContext(SearchContexts)
   const [searchResults, setSearchResults] = useState([]);
+  const [comments, setComments] = useState([]);
+  const [newComment, setNewComment] = useState('');
+
+  useEffect(() => {
+    const storedComments = JSON.parse(localStorage.getItem('comments')) || [];
+    setComments(storedComments);
+  }, [commetns]);
+
+  const handleInputChange = (event) => {
+    setNewComment(event.target.value);
+  };
+
+  const handleAddComment = () => {
+    if (newComment.trim() !== '') {
+      const newCommentObj = {
+        id: Date.now(),
+        text: newComment,
+        author_name: "Liliya",
+        published_time: "Just Now",
+        like_count: 0,
+        dislike_count: 0,
+        thumbnails: [{ url: "../../../public/png/ted.svg" }],
+      };
+  
+      const updatedComments = [...commetns.comments, newCommentObj];
+      setComments(updatedComments);
+      setNewComment('');
+  
+      localStorage.setItem('comments', JSON.stringify(updatedComments));
+    }
+  };
+  
+
+
 
   useEffect(() => {
     setLoading(true)
@@ -138,6 +173,73 @@ const OnePage = ({ fetch, id }) => {
                 <li>
                   <button className="one__page-download-button" onClick={handleDownloadClick}>Downloaded</button>
                 </li>
+              </ul>
+            </div>
+            <div className='d-flex align-items-center mt-5 gap-3'>
+              <div>
+                <img src="../../../public/png/ted.svg" alt="icon" className='commetn__img' />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder='Your comment'
+                  className='comment__inp'
+                  value={newComment}
+                  onChange={handleInputChange}
+                />
+                <button onClick={handleAddComment}>Add Comment</button>
+              </div>
+            </div>
+            <div className='mt-5'>
+              <ul>
+                {comments.length === 0 ? (
+                  commetns?.comments?.map((comment) => (
+                    <li key={comment.id} className=' d-flex gap-4 my-3 align-items-center'>
+                      <div>
+                        <img className='rounded-circle commetn__img' src={`${comment?.thumbnails[0]?.url}`} alt="img" />
+                      </div>
+                      <div>
+                        <p>
+                          <strong className='me-2'>{comment.author_name}</strong>
+                          {comment.published_time}
+                        </p>
+                        <p>{comment.text}</p>
+                        <div className=' d-flex gap-3'>
+                          <button className="  d-flex align-items-center me-2" style={{ color: liked ? 'red' : 'black' }}>
+                            <AiOutlineLike className="me-1" /> {comment.like_count}
+                          </button>
+                          <button className=" ms-2 d-flex align-items-center" style={{ color: disliked ? 'red' : 'black' }}>
+                            <AiOutlineDislike className=" me-1" /> {dislikes}
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  ))
+                ) : (
+                  comments?.map((comment) => (
+                    <li key={comment.id} className=' d-flex gap-4 my-3 align-items-center'>
+                      <div>
+                        <img className='rounded-circle commetn__img' src={`${comment?.thumbnails[0]?.url}`} alt="img" />
+                      </div>
+                      <div>
+                        <p>
+                          <strong className='me-2'>{comment.author_name}</strong>
+                          {comment.published_time}
+                        </p>
+                        <p>{comment.text}</p>
+                        <div className=' d-flex gap-3'>
+                          <button className="  d-flex align-items-center me-2" style={{ color: liked ? 'red' : 'black' }}>
+                            <AiOutlineLike className="me-1" /> {comment.like_count}
+                          </button>
+                          <button className=" ms-2 d-flex align-items-center" style={{ color: disliked ? 'red' : 'black' }}>
+                            <AiOutlineDislike className=" me-1" /> {dislikes}
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  ))
+                )}
+
               </ul>
             </div>
           </div>
